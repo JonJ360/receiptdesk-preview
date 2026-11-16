@@ -1,0 +1,22 @@
+{
+  "name": "360 Solutions Receipts",
+  "short_name": "360 Receipts",
+  "description": "Private 360 Solutions receipt workspace, powered by ReceiptDesk.",
+  "start_url": "../#workspace",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#f7fafc",
+  "theme_color": "#20699e",
+  "icons": [
+    {
+      "src": "360-solutions-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "360-solutions-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

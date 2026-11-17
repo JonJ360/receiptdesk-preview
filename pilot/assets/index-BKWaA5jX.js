@@ -172,7 +172,7 @@ fn fs_main(in : VertexOutput) -> @location(0) vec4<f32> {
 `),T+=k.str+" ",k.hasEOL&&(T+=`
 `),A=F}if(T.replace(/\s/g,"").length<30){const k=b.getViewport({scale:2}),F=document.createElement("canvas");F.width=k.width,F.height=k.height,await b.render({canvas:F,viewport:k}).promise;const D=await uR(await Uc(F),t);m.push(D.text),y.push(D.confidence)}else m.push(T),y.push(100)}s=m.join(`
 
-`),l=y.reduce((w,b)=>w+b,0)/y.length}finally{await v.cleanup()}}else{const v=await uR(a,t);h=v,s=v.text,l=v.confidence,u=v.alternateText}t({stage:"Extracting receipt details",percent:100});let f=fc(s,u),p=u?s+`
+`),l=y.reduce((w,b)=>w+b,0)/y.length}finally{await v.cleanup()}}else{const v=await uR(a,t);h=v,s=v.text,l=v.confidence,u=v.alternateText}s=s.replace(/\u0000/g,"�"),u=u.replace(/\u0000/g,"�"),t({stage:"Extracting receipt details",percent:100});let f=fc(s,u),p=u?s+`
 
 [Alternate OCR verification pass]
 `+u:s;if(i&&f.total===null&&h)try{const v=await pW(a,h);if(v.totalImage){t({stage:"Reading actual payment handwriting privately",percent:100});const m=await hW(v.totalImage,v.tipImage);p+=`
